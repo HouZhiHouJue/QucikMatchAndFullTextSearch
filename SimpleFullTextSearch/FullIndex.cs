@@ -22,6 +22,7 @@ namespace SimpleFullTextSearch
             List<wordObject> m_wordObjectList = new List<wordObject>();//TODO:Initialize
             WordLibrary m_library = new WordLibrary(m_wordObjectList);
             Init(m_library.Words);
+
         }
 
         private void Init(Dictionary<string, HashSet<string>> words)
