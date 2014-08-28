@@ -1,4 +1,0 @@
-E:\GitHub\Master\QuickMatchArithmetic\QucikMatch\QucikMatch\bin\Debug\QucikMatch.dll
-E:\GitHub\Master\QuickMatchArithmetic\QucikMatch\QucikMatch\bin\Debug\QucikMatch.pdb
-E:\GitHub\Master\QuickMatchArithmetic\QucikMatch\QucikMatch\obj\Debug\QucikMatch.dll
-E:\GitHub\Master\QuickMatchArithmetic\QucikMatch\QucikMatch\obj\Debug\QucikMatch.pdb
