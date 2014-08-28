@@ -55,8 +55,9 @@ namespace HighLighter
         }
 
         //最长匹配法
-        public bool FormattterWord(HtmlFormatter formatter,ref string text)
+        public bool FormattterWord(HtmlFormatter formatter, ref string text)
         {
+            List<identifyRecord> m_list = new List<identifyRecord>();
             int index = 0;
 
             while (index < text.Length)
@@ -92,7 +93,28 @@ namespace HighLighter
 
                             if (hash.Contains(sub) && (fastLength[begin] >> Math.Min(j, 7)) == 0) // 避免最短匹配后直接返回的话加上
                             {
-                                return true;
+                                identifyRecord m_recourd = new identifyRecord() { Begin = index, End = index + count };
+                                if (m_list.Count == 0)
+                                {
+                                    m_list.Add(m_recourd);
+                                    continue;
+                                }
+                                bool flag = false;
+                                for (int i = 0; i < m_list.Count; i++)
+                                {
+                                    if (m_recourd.Begin <= m_list[i].End)
+                                    {
+                                        m_list[i].End = Math.Max(m_list[i].End, m_recourd.End);
+                                        flag = true;
+                                        break;
+                                    }
+                                }
+                                if (!flag)
+                                {
+                                    m_list.Add(m_recourd);
+                                    continue;
+                                }
+                                //return true;
                             }
                         }
                     }
@@ -100,9 +122,35 @@ namespace HighLighter
 
                 index += count;
             }
-
-            return false;
+            int length = 0;
+            foreach (identifyRecord record in m_list)
+            {
+                text.Insert(record.Begin + length, formatter.StartTag);
+                length += formatter.StartTag.Length;
+                text.Insert(record.End + length, formatter.EndTag);
+                length += formatter.EndTag.Length;
+            }
+            return true;
         }
 
+    }
+
+    public class identifyRecord
+    {
+        private int m_begin;
+
+        public int Begin
+        {
+            get { return m_begin; }
+            set { m_begin = value; }
+        }
+
+        private int m_end;
+
+        public int End
+        {
+            get { return m_end; }
+            set { m_end = value; }
+        }
     }
 }
