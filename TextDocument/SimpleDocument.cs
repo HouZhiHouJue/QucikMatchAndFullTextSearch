@@ -22,5 +22,13 @@ namespace TextDocument
             get { return m_id; }
             set { m_id = value; }
         }
+
+        private string m_test;
+
+        public string Test
+        {
+            get { return m_test; }
+            set { m_test = value; }
+        }
     }
 }
