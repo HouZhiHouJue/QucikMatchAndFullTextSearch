@@ -5,7 +5,7 @@ using System.Text;
 using System.Collections;
 
 namespace HighLighter
-{
+{    
     public class HighLight
     {
         private HashSet<string> hash = new HashSet<string>();

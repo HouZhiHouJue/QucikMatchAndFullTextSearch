@@ -16,7 +16,7 @@ namespace QucikMatch
         private BitArray endCheck = new BitArray(char.MaxValue);
         private int maxWordLength = 0;
         private int minWordLength = int.MaxValue;
-
+             
         public WordsQucikMatch(List<string> badwords)
         {
             Init(badwords);
