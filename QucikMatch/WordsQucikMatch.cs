@@ -95,7 +95,8 @@ namespace QucikMatch
                                 if ((fastLength[begin] >> Math.Min(j + 1, 7)) != 0)
                                     if (endCheck[text[index + j + 1]])
                                         if ((fastCheck[text[index + j + 1]] & (1 << Math.Min(j + 1, 7))) != 0)
-                                            continue;
+                                            if (hash.Contains(text.Substring(index, j + 2)))
+                                                continue;
                             string sub = text.Substring(index, j + 1);
                             if (hash.Contains(sub))// && (fastLength[begin] >> Math.Min(j, 7)) == 0 避免最短匹配后直接返回的话加上
                             {
