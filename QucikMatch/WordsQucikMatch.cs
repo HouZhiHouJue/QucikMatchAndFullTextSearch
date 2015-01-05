@@ -16,7 +16,7 @@ namespace QucikMatch
         private BitArray endCheck = new BitArray(char.MaxValue);
         private int maxWordLength = 0;
         private int minWordLength = int.MaxValue;
-             
+
         public WordsQucikMatch(List<string> badwords)
         {
             Init(badwords);
@@ -91,8 +91,12 @@ namespace QucikMatch
                     {
                         if ((fastLength[begin] & (1 << Math.Min(j, 7))) > 0 && endCheck[current])
                         {
+                            if (index + j < text.Length - 1)
+                                if ((fastLength[begin] >> Math.Min(j + 1, 7)) != 0)
+                                    if (endCheck[text[index + j + 1]])
+                                        if ((fastCheck[text[index + j + 1]] & (1 << Math.Min(j + 1, 7))) != 0)
+                                            continue;
                             string sub = text.Substring(index, j + 1);
-
                             if (hash.Contains(sub))// && (fastLength[begin] >> Math.Min(j, 7)) == 0 避免最短匹配后直接返回的话加上
                             {
                                 return true;
