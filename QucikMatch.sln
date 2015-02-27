@@ -1,6 +1,6 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 11.00
-# Visual Studio 2010
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QucikMatch", "QucikMatch\QucikMatch.csproj", "{3ECFE1B8-9978-4D04-B992-DD3395C52706}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QucikMatchTest", "QucikMatchTest\QucikMatchTest.csproj", "{A3085145-F366-45C5-998D-57F06E19B6EA}"
@@ -19,6 +19,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleFullTextSearchTest", "SimpleFullTextSearchTest\SimpleFullTextSearchTest.csproj", "{0E9EBAB3-5B1A-4CCD-B3C1-6A88E6C6BA9F}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HighLighter", "HighLighter\HighLighter.csproj", "{535B0E8A-7D96-4C49-9899-F72B49893A85}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApplication1", "ConsoleApplication1\ConsoleApplication1.csproj", "{39FF1C4D-F196-439F-A1CB-DDB02BFF80EA}"
 EndProject
 Global
 	GlobalSection(TestCaseManagementSettings) = postSolution
@@ -53,6 +55,10 @@ Global
 		{535B0E8A-7D96-4C49-9899-F72B49893A85}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{535B0E8A-7D96-4C49-9899-F72B49893A85}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{535B0E8A-7D96-4C49-9899-F72B49893A85}.Release|Any CPU.Build.0 = Release|Any CPU
+		{39FF1C4D-F196-439F-A1CB-DDB02BFF80EA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{39FF1C4D-F196-439F-A1CB-DDB02BFF80EA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{39FF1C4D-F196-439F-A1CB-DDB02BFF80EA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{39FF1C4D-F196-439F-A1CB-DDB02BFF80EA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

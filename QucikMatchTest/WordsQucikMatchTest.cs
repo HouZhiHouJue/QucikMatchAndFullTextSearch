@@ -5,8 +5,8 @@ using System.Collections.Generic;
 
 namespace QucikMatchTest
 {
-    
-    
+
+
     /// <summary>
     ///这是 WordsQucikMatchTest 的测试类，旨在
     ///包含所有 WordsQucikMatchTest 单元测试
@@ -71,9 +71,9 @@ namespace QucikMatchTest
         [TestMethod()]
         public void HasWordTest()
         {
-            List<string> badwords = null; // TODO: 初始化为适当的值
+            List<string> badwords = new List<string> { "中国" ,"中国人"}; // TODO: 初始化为适当的值
             WordsQucikMatch target = new WordsQucikMatch(badwords); // TODO: 初始化为适当的值
-            string text = string.Empty; // TODO: 初始化为适当的值
+            string text = "中国的"; // TODO: 初始化为适当的值
             bool expected = false; // TODO: 初始化为适当的值
             bool actual;
             actual = target.HasWord(text);
